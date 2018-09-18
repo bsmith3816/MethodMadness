@@ -1,12 +1,13 @@
 package bsmith;
 
-import static bsmith.BSmithLib.println;
+import static bsmith.BSmithLib.primePrinter;
+import static bsmith.BSmithLib.sumUpTo;
 
 public class TestFile {
 
     public static void main(String[] args)
     {
-        println("I love a cup of Java in the morning.");
+        primePrinter(2);
     }
 
 }
