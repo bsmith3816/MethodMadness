@@ -1,13 +1,12 @@
-package bsmith;
+package bsmith; //Brandon Smith 9/24/18
 
-import static bsmith.BSmithLib.primePrinter;
-import static bsmith.BSmithLib.sumUpTo;
+import static bsmith.BSmithLib.*;
 
 public class TestFile {
 
     public static void main(String[] args)
     {
-        primePrinter(2);
+        System.out.println(stringUnion("momma","dad","deaf"));
     }
 
 }

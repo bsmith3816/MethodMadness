@@ -1,12 +1,14 @@
-package bsmith;
+package bsmith; //Brandon Smith 9/24/18
 
 public class BSmithLib {
     public static void println(String str){
         System.out.println(str);
     }
+
     public static String dateStr(String date){
         return date.substring(0,2) + "-" + date.substring(3,5) + "-" + date.substring(6);
     }
+
     public static String cutOut(String mainstr, String substr){
         int a = mainstr.indexOf(substr);
         if(a < 0)
@@ -17,6 +19,37 @@ public class BSmithLib {
         }
         return mainstr.substring(a + substr.length());
     }
+
+    public static boolean isPalindrome(String word){
+        String word1 = word;
+        String word2 = "";
+        for(int i = word.length()-1;i >= 0;i--){
+            word2 += word1.substring(i);
+            word1 = word1.substring(0,i);
+        }
+        if(word.equals(word2)){
+            return true;
+        }
+        return false;
+    }
+
+    public static int stringUnion(String word1,String word2,String word3){
+        int ans = 0;
+        int num = 97;
+        String a = "";
+        String letter = "";
+        char letter = "";
+        word1 = word1.toLowerCase();
+        word2 = word2.toLowerCase();
+        word3 = word3.toLowerCase();
+        for(int i = 0;i <= 26; i++){
+            char letter = (char) num;
+            String s=Character.toString(letter);
+            System.out.println(letter);
+        }
+        return 'd';
+    }
+
     //Math Methods
     public static int sumUpTo(int num){
         int total = 0;
@@ -25,6 +58,7 @@ public class BSmithLib {
         }
         return total;
     }
+
     public static void primePrinter(int num){
         int n = 0;
         String result = "";
@@ -32,15 +66,16 @@ public class BSmithLib {
         int k = 0;
         while(n < num) {
             for(int j = 1;j <= i; j++) {
-                if(i % j == 0){
+                if (i % j == 0) {
                     k++;
                 }
-                if(k == 2){
-                    result += i + " ";
-                    n++;
-                }
+            }
+            if(k == 2){
+                result += i + " ";
+                n++;
             }
             i++;
+            k = 0;
         }
         System.out.println(result);
     }
