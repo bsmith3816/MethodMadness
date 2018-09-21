@@ -6,7 +6,8 @@ public class TestFile {
 
     public static void main(String[] args)
     {
-        System.out.println(stringUnion("poop","pad","ducca"));
+        System.out.println("05/27/2001");
+        System.out.println(stringUnion("poasczop","p12asdad","ducasdzca"));
     }
 
 }
