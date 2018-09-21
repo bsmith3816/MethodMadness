@@ -34,20 +34,22 @@ public class BSmithLib {
     }
 
     public static int stringUnion(String word1,String word2,String word3){
-        int ans = 0;
-        int num = 97;
-        String a = "";
-        String letter = "";
-        char letter = "";
         word1 = word1.toLowerCase();
         word2 = word2.toLowerCase();
         word3 = word3.toLowerCase();
-        for(int i = 0;i <= 26; i++){
-            char letter = (char) num;
-            String s=Character.toString(letter);
-            System.out.println(letter);
+        int result = 0;
+        String letter;
+        for(int i = 97;i <= 124; i++){
+            letter = Character.toString ((char) i);
+            if(word1.contains(letter) && word2.contains(letter)){
+                result++;
+            } else if(word1.contains(letter) && word3.contains(letter)){
+                result++;
+            } else if(word2.contains(letter) && word3.contains(letter)){
+                result++;
+            }
         }
-        return 'd';
+        return result;
     }
 
     //Math Methods
