@@ -5,6 +5,19 @@ public class BSmithLib {
         System.out.println(str);
     }
 
+    public static boolean isPalindrome(String word){
+        String word1 = word;
+        String word2 = "";
+        for(int i = word.length()-1;i >= 0;i--){
+            word2 += word1.substring(i);
+            word1 = word1.substring(0,i);
+        }
+        if(word.equals(word2)){
+            return true;
+        }
+        return false;
+    }
+
     public static String dateStr(String date){
         return date.substring(3,5) + "-" + date.substring(0,2) + "-" + date.substring(6);
     }
@@ -18,19 +31,6 @@ public class BSmithLib {
             return mainstr.substring(0,a) + mainstr.substring(a + substr.length());
         }
         return mainstr.substring(a + substr.length());
-    }
-
-    public static boolean isPalindrome(String word){
-        String word1 = word;
-        String word2 = "";
-        for(int i = word.length()-1;i >= 0;i--){
-            word2 += word1.substring(i);
-            word1 = word1.substring(0,i);
-        }
-        if(word.equals(word2)){
-            return true;
-        }
-        return false;
     }
 
     public static int stringUnion(String word1,String word2,String word3){
@@ -53,6 +53,7 @@ public class BSmithLib {
     }
 
     //Math Methods
+
     public static int sumUpTo(int num){
         int total = 0;
         for(int i=0; i<=num; i++) {
