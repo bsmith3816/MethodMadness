@@ -63,22 +63,22 @@ public class BSmithLib {
     }
 
     public static void primePrinter(int num){
-        int n = 0;
+        int primesfound = 0;
         String result = "";
-        int i = 2;
-        int k = 0;
-        while(n < num) {
-            for(int j = 1;j <= i; j++) {
-                if (i % j == 0) {
-                    k++;
+        int test = 2;
+        int factors = 0;
+        while(primesfound < num) {
+            for(int divisor = 1;divisor <= test; divisor++) {
+                if (test % divisor == 0) {
+                    factors++;
                 }
             }
-            if(k == 2){
-                result += i + " ";
-                n++;
+            if(factors == 2){
+                result += test + " ";
+                primesfound++;
             }
-            i++;
-            k = 0;
+            test++;
+            factors = 0;
         }
         System.out.println(result);
     }
